@@ -7,6 +7,24 @@
 
 ```javascript
 const core = require("./model.core");
+
+core.addNode({
+  name: "a-node-name",
+  middleware: async ({}) => {
+    return {
+      xxxInNode: "haha",
+    };
+  },
+});
+
+core.addNode({
+  name: "node-can-be-executed-directly",
+  middleware: async ({ ctx }) => {
+    const {} = ctx.get();
+    return {};
+  },
+});
+
 core.addActionFlow("xxx", ({ forWhile, ifElse, exec }) => {
   return [
     forWhile(
