@@ -6,7 +6,7 @@
 - 支持循环，条件分支，并支持互相可嵌套
 
 ```javascript
-const core = require("./model.core");
+const core = require("./model/core");
 
 core.addNode({
   name: "a-node-name",
